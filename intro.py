@@ -36,9 +36,8 @@ def intros(text, h, s, l, border_char="-", smwt=False):
     r, g, b = hsl_to_rgb(h, s, l)
     colored_art = f"{rgb_to_ansi(r, g, b)}{ascii_art}\033[0m"
 
-    # Menentukan warna border
     if smwt:
-        border_color = rgb_to_ansi(r, g, b)  # Warna border sama dengan warna teks
+        border_color = rgb_to_ansi(r, g, b)
     else:
         border_color = rgb_to_ansi(255, 255, 255)
 
@@ -49,7 +48,7 @@ def intros(text, h, s, l, border_char="-", smwt=False):
     )
     print(border)
     print(colored_art)
-    print(border)  # Garis pembatas di bawah
+    print(border)
 
 
 if __name__ == "__main__":
